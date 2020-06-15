@@ -41,6 +41,7 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+		<!-- html парсер -->
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>

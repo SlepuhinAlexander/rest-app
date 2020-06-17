@@ -1,5 +1,6 @@
 package ru.ifmo.restapp.config;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,8 +38,10 @@ public class ThreadConfig {
         this.threadNamePrefix = threadNamePrefix;
     }
 
-    @Bean // метод будет вызван спрингом, объект, который возвращает
-    // метод будет сохранен, как бин объект: TaskExecutor-объект
+    @Bean // метод будет вызван спрингом у объектов, которые сохраняются спрингом.
+    // обычно такие методы располагаются в @Configuration классах.
+    // объект, который возвращает метод, - будет сохранен, как бин объект: TaskExecutor-объект.
+    @Qualifier("executor")
     public TaskExecutor threadPoolTaskExecutor(){
         // метод возвращает пул потоков
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();

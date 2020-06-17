@@ -48,4 +48,14 @@ public class Course {
     public void setDuration(String duration) {
         this.duration = duration;
     }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+               "id=" + id +
+               ", title='" + title + '\'' +
+               ", price='" + price + '\'' +
+               ", duration='" + duration + '\'' +
+               '}';
+    }
 }

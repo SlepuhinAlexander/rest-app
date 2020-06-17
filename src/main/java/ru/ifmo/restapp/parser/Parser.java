@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Parser {
 
-    @Scheduled // метод должен вызывать по расписанию
+    @Scheduled // метод должен вызываться по расписанию
     public void start(){
 
     }
